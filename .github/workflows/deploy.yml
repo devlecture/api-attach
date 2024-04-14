@@ -49,7 +49,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-          	sudo mkdir -p /home/ec2-user/upload
+            sudo mkdir -p /home/ec2-user/upload
             sudo docker pull clz2024red/attach:latest
             sudo docker stop attach || true
             sudo docker rm attach || true
